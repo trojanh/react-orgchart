@@ -26,7 +26,8 @@ const ChartNode = ({
   collapsible,
   multipleSelect,
   changeHierarchy,
-  onClickNode
+  onClickNode,
+  className
 }) => {
   const node = useRef();
 
@@ -40,6 +41,7 @@ const ChartNode = ({
 
   const nodeClass = [
     "oc-node",
+    className || "",
     isChildrenCollapsed ? "isChildrenCollapsed" : "",
     allowedDrop ? "allowedDrop" : "",
     selected ? "selected" : ""
